@@ -13,8 +13,9 @@
 }
 
 a > span{
+    
     margin: 0 30px;
-    font-size: 1.3rem;
+    font-size: 1.0rem;
     cursor: pointer;
     color: white;
 }
@@ -30,4 +31,14 @@ a > span:hover {
 
 .user__avatar {
     font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .header__icon {
+        width: 50px;
+        
+    }
+    a > span{
+        font-size:12px
+    }
 }
