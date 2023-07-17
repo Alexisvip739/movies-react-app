@@ -1,71 +1,79 @@
-.posterImage__title {
+/* Estilos para el carrusel */
+.poster {
+    position: relative;
+  }
+  
+  /* Estilos para cada slide del carrusel */
+  .posterImageContainer {
+    position: relative;
+    max-height: 600px;
+  }
+  
+  .posterImage {
+   
+    position: relative;
+  }
+  
+  .posterImage > img {
+    object-fit:cover;
+    width: 100%;
+    height: auto;
+    display: block;
+    
+  }
+  
+  .posterImage__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+  }
+  
+  /* Estilos para el texto */
+  .posterImage__title {
     font-weight: 900;
-    font-size: 4rem;
+    font-size: 2rem;
     margin-bottom: 0.4rem;
     text-align: left;
-}
-
-.posterImage__runtime {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.posterImage__rating {
-    margin-left: 3rem;
-}
-
-.posterImage__description {
+  }
+  
+  .posterImage__runtime {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .posterImage__rating {
+    margin-left: 1rem;
+  }
+  
+  .posterImage__description {
     font-style: italic;
     font-size: 1rem;
     margin-bottom: 0.25rem;
-    display: flex;
     text-align: left;
-    width: 50%;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
+    max-height: 5.2em; /* Limita la altura máxima para 5 líneas */
+    overflow: hidden;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
     .posterImage__title {
-        font-size: 3rem;
+      font-size: 1.5rem;
     }
-
+  
     .posterImage__runtime {
-        font-size: 1.5rem;
+      font-size: 1rem;
     }
-
+  
     .posterImage__rating {
-        margin-left: 2rem;
+      margin-left: 0.5rem;
     }
-
+  
     .posterImage__description {
-        font-size: 0.9rem;
-         /* Keep the same styles as before */
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 5; /* Limit the number of lines to 5 */
-        -webkit-box-orient: vertical;
+      font-size: 0.9rem;
+      max-height: 3.6em; /* Limita la altura máxima a 3 líneas */
     }
-}
-
-@media (max-width: 420px) {
-    .posterImage__title {
-        font-size: 1rem;
-    }
-
-    .posterImage__runtime {
-        font-size: 1.0rem;
-    }
-
-    .posterImage__rating {
-        margin-left: 1.5rem;
-    }
-
-    .posterImage__description {
-        font-size: 0.9rem;
-         /* Keep the same styles as before */
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 3; /* Limit the number of lines to 5 */
-        -webkit-box-orient: vertical;
-    }
-}
+  }

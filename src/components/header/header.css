@@ -3,17 +3,20 @@
     padding: .5rem 0;
     align-items: center;
     display: flex;
-    justify-content:space-between;
+    justify-content:center;
+    width: 100%;
 }
-
-.headerLeft, .headerRight {
+.headerLeft{
     display: flex;
-    align-items: center;
-
+    width: 500px;
+    margin: auto;
+    flex-direction: row;
+    align-items: flex-start;
 }
+
 
 a > span{
-    
+    width: 80%;
     margin: 0 30px;
     font-size: 1.0rem;
     cursor: pointer;
@@ -39,6 +42,9 @@ a > span:hover {
         
     }
     a > span{
-        font-size:12px
+        width:300px;
+        font-size:16px;
+        
+        font-weight: bolder;
     }
 }
